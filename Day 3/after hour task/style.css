@@ -1,0 +1,54 @@
+.flexbox{
+background-color: rgb(37, 36, 36);
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-between;
+padding: 10px;
+flex-direction: row;
+width: 60%;
+margin:auto;
+border: 2px;
+border-style: groove;
+border-right: rgb(37, 37, 37);
+border-top: rgb(37, 37, 37);
+}
+.flexbox1{
+    display: flex;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+}
+.flexbox2{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    padding: 5px;
+}
+.flexitem{
+color: white;
+margin: 10px;
+}
+.flexlogo{
+    color: white;
+    padding-right: 15px;
+    margin-top: 1px;
+}
+body{
+    background: rgb(181,0,0);
+background: linear-gradient(210deg, rgb(184, 40, 40) 0%, rgba(169,0,0,1) 4%, rgba(252,69,69,1) 100%);
+background-attachment:fixed;
+    margin-top:  250px;
+}
+span{
+    color: rgb(231, 55, 55);
+}
+p{
+    font-style: italic;
+    color: rgb(48, 46, 46);
+    text-decoration: underline;
+    text-align: center;
+}
+*{
+    font-family: Verdana;
+}
