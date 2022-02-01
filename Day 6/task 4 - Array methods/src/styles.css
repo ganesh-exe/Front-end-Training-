@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+.par {
+  color: red;
+}
+.child {
+  color: white;
+  background-color: blue;
+}
+.child2 {
+  font-size: 1.5em;
+  color: black;
+  background-color: red;
+}
