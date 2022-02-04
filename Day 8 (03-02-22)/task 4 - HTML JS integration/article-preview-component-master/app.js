@@ -1,5 +1,4 @@
-
-function share(){
-    var msg=document.getElementById("share");
-    msg.classList.toggle("show");
-}
+function share() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
