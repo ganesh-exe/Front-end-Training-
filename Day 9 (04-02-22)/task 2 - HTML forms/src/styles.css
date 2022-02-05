@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(96, 209, 96);
+}
+div {
+  margin: 50px 200px;
+  padding: 20px 50px;
+  border: 10px 20px;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+}

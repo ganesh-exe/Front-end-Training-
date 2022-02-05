@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<link rel="Stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+	<div id="app">
+	<form>
+		<p>Name :</p><input type="text">
+		<p>Email :</p><input type="email">
+		<p>Age :</p><input type="number" min="1" max="100">
+		<p>Which option best describes you?</p>
+		<select style="height:25px">
+			<option value="Tactical">Tactical</option>
+			<option value="Logical">Logical</option>
+			<option value="Practical">Practical</option>
+			<option value="Experimental">Experimental</option>
+		</select><br>
+		<p>How likely would you recommend Windows to your friend?</p>
+		<input type="radio" value="Likely">Likely
+		<input type="radio" value="Very">Very likely
+		<input type="radio" value="not">Not likely
+		<p>Known languages:</p>
+		<input type="checkbox" value="C">C<br>
+		<input type="checkbox" value="Java">Java<br>
+		<input type="checkbox" value="Python">Python<br>
+		<input type="checkbox" value="Others">Others<br>
+		<p>Add comments :</p>
+		<input type="text" id="comments" style="height:40px"><br>
+		<br><button type="submit" id="btn"> Submit 
+	</form>
+</div>
+<script src="./src/index.js">
+	</script>
+</body>
+
+</html>
