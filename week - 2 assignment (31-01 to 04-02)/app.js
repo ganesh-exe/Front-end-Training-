@@ -1,21 +1,21 @@
 window.onload = () => {
-	const form1 = document.querySelector("#addForm");
+	const form1 = document.querySelector("#addTask");
 
-	let items = document.getElementById("items");
+	let tasks = document.getElementById("tasks");
 	let submit = document.getElementById("submit");
 
-	let editItem = null;
+	let editTask = null;
 
-	form1.addEventListener("submit", addItem);
-	items.addEventListener("click", removeItem);
+	form1.addEventListener("submit", addTask);
+	tasks.addEventListener("click", removeTask);
 };
 
-function addItem(e) {
+function addTask(e) {
 	e.preventDefault();
 
 	if (submit.value != "Submit") {
-		editItem.target.parentNode.childNodes[0].data
-			= document.getElementById("item").value;
+		editTask.target.parentNode.childNodes[0].data
+			= document.getElementById("task").value;
 		submit.value = "Submit";
 		setTimeout(function() {
 			alert("Task edited successfully")
@@ -23,11 +23,11 @@ function addItem(e) {
 		return false;
 	}
 
-	let newItem = document.getElementById("item").value;
-	if (newItem.trim() == "" || newItem.trim() == null)
+	let newTask = document.getElementById("task").value;
+	if (newTask.trim() == "" || newTask.trim() == null)
 		return false;
 	else
-		document.getElementById("item").value = "";
+		document.getElementById("task").value = "";
 
 	let li = document.createElement("li");
 	li.className = "tasks";
@@ -46,29 +46,29 @@ function addItem(e) {
 
 	editButton.appendChild(document.createTextNode("Edit"));
 
-	li.appendChild(document.createTextNode(newItem));
+	li.appendChild(document.createTextNode(newTask));
 	li.appendChild(deleteButton);
 	li.appendChild(editButton);
 
-	items.appendChild(li);
+	tasks.appendChild(li);
 }
 
-function removeItem(e) {
+function removeTask(e) {
 	e.preventDefault();
 	if (e.target.classList.contains("deletebtn")) {
 		if (confirm("Are you Sure?")) {
 			let li = e.target.parentNode;
-			items.removeChild(li);
+			tasks.removeChild(li);
 			setTimeout(function() {
 				alert("Task deleted successfully")
 			}, 400);
 		}
 	}
 	if (e.target.classList.contains("editbtn")) {
-		document.getElementById("item").value =
+		document.getElementById("task").value =
 			e.target.parentNode.childNodes[0].data;
 		submit.value = "EDIT";
-		editItem = e;
+		editTask = e;
 	}
 }
 

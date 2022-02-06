@@ -19,8 +19,7 @@ body {
     .app{
         margin: 0px;
         border:0px;
-        padding:20px 40px;
-        width:60%;
+        width:80vw;
     }
 }
 h1{
@@ -45,6 +44,21 @@ h3{
     max-height: 600px;
     grid-template-rows: 50px 50px 50px;
     gap : 10px;
+}
+@media  (max-width:500px) {
+    .app{
+        margin:20px;
+        border:0px;
+        
+    }
+    .grid1{
+        justify-content: center;
+        align-content: center;
+        grid-template-rows: 100px 50px 50px;
+        gap:20px;
+        width:80vw;
+        height:30vh;
+    }
 }
 
 .submit-box{
@@ -72,6 +86,7 @@ h3{
     grid-template-columns: 1fr 1fr 1fr;
     gap:10px;
 }
+
 li{
     padding: 10px 15px;
     margin:2px;
