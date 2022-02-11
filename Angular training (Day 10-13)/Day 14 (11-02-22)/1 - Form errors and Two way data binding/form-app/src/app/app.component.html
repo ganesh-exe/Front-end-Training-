@@ -1,7 +1,8 @@
 <form action="" class="form" #logIn="ngForm" (ngSubmit)="signIn(logIn.value)">
 
-  <input placeholder="email" name="email" ngModel email #email="ngModel">
+  <input placeholder="email" name="email" ngModel email #email="ngModel" [(ngModel)]="emailId">
   <br><small *ngIf="email.invalid">Please give a valid email</small><br>
+  <br><small *ngIf="emailId">Email id is - {{emailId}}</small><br>
 
   <input type="password" name="paswd" placeholder="password" ngModel #password="ngModel" minlength="7" >
   <br><small *ngIf="password.invalid">Please give a valid password</small><br>
