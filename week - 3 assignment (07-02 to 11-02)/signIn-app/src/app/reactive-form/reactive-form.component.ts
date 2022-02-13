@@ -22,6 +22,7 @@ export class ReactiveFormComponent implements OnInit {
   })
   }
   Onsubmit(){
+    alert("Information saved !")
 
     console.log(this.logIn.value)
     console.log(this.logIn.status)

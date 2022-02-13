@@ -12,6 +12,7 @@ export class TemplateFormComponent implements OnInit {
   ngOnInit(): void {
   }
   signIn(logIn:any){
+    alert("Information saved !")
     console.log(logIn)
   }
   emailId:any="";

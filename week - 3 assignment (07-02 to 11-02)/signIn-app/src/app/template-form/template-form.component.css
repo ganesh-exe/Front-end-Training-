@@ -111,7 +111,7 @@ main {
 }
 
 #signup__form input.ng-invalid.ng-touched {
-  border: 2px solid #f52020;
+  border: 2px solid #f54848;
 }
 
 input[type=submit] {
