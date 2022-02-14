@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.logIn=new FormGroup({
-      'fname': new FormControl('',[Validators.required,Validators.min(3)]) ,
+      'fname': new FormControl('',[Validators.required,Validators.minLength(3)]) ,
       'lname':new FormControl(''),
       'email': new FormControl('',[Validators.required,Validators.email]),
       'password': new FormControl(null,[Validators.required,Validators.minLength(7)]),
