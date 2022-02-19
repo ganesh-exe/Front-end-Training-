@@ -1,20 +1,21 @@
 import './App.css';
 import React, {useState} from 'react';
-import Todo from './components/Todo';
+import Contact from './components/Contact';
 
 function App() {
-  let timeout
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("")
-  const [tasks, setTasks] = useState([
-    {taskTitle:"Gym",taskDescription:"Go to gym in evening"},
-    {taskTitle:"Doctor",taskDescription:"Visit in the noon"},
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("")
+  const [contacts, setContacts] = useState([
+    {Name:"Arjun reddy",Email:"jackdaniels549@gmail.com"},
+    {Name:"Gabbar Singh",Email:"ihave2handslol@gmail.com"},
+    {Name:"Bajirao Singham",Email:"bolosubaankesari@gmail.com"},
+
   ])
-  const handleTitle=(event)=>{
-    setTitle(event.target.value)
+  const handleName=(event)=>{
+    setName(event.target.value)
   }
-  const handleDescription=(e)=>{
-    setDescription(e.target.value)
+  const handleEmail=(e)=>{
+    setEmail(e.target.value)
   }
   
 
@@ -31,39 +32,39 @@ function App() {
   
   
   
-  const addTask=()=>{
-    setTasks([...tasks,{taskTitle:title,taskDescription:description}])
-    setTitle("")
-    setDescription("")
+  const addContact=()=>{
+    setContacts([...contacts,{Name:name,Email:email}])
+    setName("")
+    setEmail("")
     setTimeout(addalert,500)
   }
  
-  const deleteTask=(titleRef)=>{
-    const taskList=tasks.filter(item=>item.taskTitle!==titleRef)
-    setTasks(taskList);
+  const deleteContact=(nameRef)=>{
+    const contactList=contacts.filter(item=>item.Name!==nameRef)
+    setContacts(contactList);
     setTimeout(delalert,500)
   }
   
-  const editTask=(titleRef)=>{
-    const taskList=[...tasks]
-    const index=tasks.findIndex(ele=>ele.taskTitle==titleRef)
-    taskList[index]={taskTitle:title,taskDescription:description}
-    setTasks(taskList)
-    setTitle("")
-    setDescription("")
+  const editContact=(nameRef)=>{
+    const contactList=[...contacts]
+    const index=contacts.findIndex(ele=>ele.Name==nameRef)
+    contactList[index]={Name:name,Email:email}
+    setContacts(contactList)
+    setName("")
+    setEmail("")
     setTimeout(editalert,500)
   }
  
-  console.log(tasks)
+  console.log(contacts)
   return (
-    <div className="main"> <strong style={{fontStyle:'italic'}}>To-do App</strong>
+    <div className="main"> <strong style={{fontStyle:'italic'}}>Contact book</strong>
       <div className="App">
       <form>
-        <input type="text" className="form-control mt-1" placeholder="Task title" onChange={handleTitle} value={title}></input>
-        <input type="text" className="form-control mt-1" placeholder="Task description" onChange={handleDescription} value={description}></input>
-        <button type="button" className="btn btn-primary mt-2 mb-1" onClick={addTask}>Add task</button>
+        <input type="text" className="form-control mt-1" placeholder="Enter name" onChange={handleName} value={name}></input>
+        <input type="email" className="form-control mt-1" placeholder="Enter email" onChange={handleEmail} value={email}></input>
+        <button type="button" className="btn btn-primary mt-2 mb-1" onClick={addContact}>Add task</button>
      </form>
-     <Todo tasks={tasks} deleteTask={deleteTask} editTask={editTask}/>
+     <Contact contacts={contacts} deleteContact={deleteContact} editContact={editContact}/>
       </div>
     </div>
   );
