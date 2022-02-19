@@ -1,13 +1,14 @@
 import React from 'react';
 
+
 export default function Header(props) {
   return (
     <header className=" row center" style={{padding: '1rem',
       margin: '0.5rem',
-      borderRadius: '0.5rem', backgroundColor:'#ebfa19'}}>
+      borderRadius: '0.5rem',borderStyle: 'set' , backgroundColor:'#ebfa19'}}>
       <div>
         <a href="#/">
-          <h1>Small Shopping Cart</h1>
+          <h1>React Cart</h1>
         </a>
       </div>
       <div>

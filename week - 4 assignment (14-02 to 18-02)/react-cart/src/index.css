@@ -1,12 +1,22 @@
 body {
   font-family: 'Helvetica';
 }
+Main{
+  border-style: inset ;
+}
+aside{
+  border-style: inset ;
+}
 h1,
 h2,
 h3 {
   margin: 0.5rem 0;
 }
 h1 {
+  color: #0b8cf5;
+  padding:5px 5px;
+  border: 1px solid darkblue;
+  border-radius: 7px;
   font-size: 1.5rem;
 }
 h2 {
@@ -16,6 +26,7 @@ h3 {
   font-size: 1rem;
 }
 a {
+  padding: 0px 5px;
   text-decoration: none;
 }
 .row {
@@ -48,23 +59,36 @@ img.small {
 button {
   font-size: 0.8rem;
   padding: 0.2rem;
-  margin: 0.1rem;
+  margin: 0.5rem 0px;
   border-radius: 0.5rem;
   border: 0.1rem #404040 solid;
-  background-color: #f0c040;
+  background-color: #5fec43;
   cursor: pointer;
 }
 button.add {
-  background-color: #40c0f0;
-  width: 1.5rem;
+  margin: 0.1rem;
+  text-align: center;
+  padding: 0px;
+  font-weight:bolder ;
+  background-color: #24db1e;
+  width: 1.4rem;
+  height: 1rem;
 }
 button.remove {
-  background-color: #f04040;
-  width: 1.5rem;
+  text-align: center;
+  margin: 0.1rem;
+  padding: 0px;
+  font-weight:bolder ;
+  background-color: #ff0000;
+  width: 1.4rem;
+  height:1rem ;
 }
 button.badge {
-  background-color: #f04040;
+  margin: 0.1rem;
+  background-color: #136bb3;
   border: none;
   color: #ffffff;
   width: 1.5rem;
+  height: 1.1rem;
+ 
 }

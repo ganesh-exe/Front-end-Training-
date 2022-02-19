@@ -20,18 +20,16 @@ function App() {
   
 
   const addalert=()=>{
-    alert("Task added successfully")
+    alert("Contact added successfully")
   }
   const delalert=()=>{
-    alert("Task deleted successfully")
+    alert("Contact deleted successfully")
   }
   const editalert=()=>{
-    alert("Task updated successfully")
+    alert("Contact updated successfully")
   }
  
-  
-  
-  
+    
   const addContact=()=>{
     setContacts([...contacts,{Name:name,Email:email}])
     setName("")
@@ -62,7 +60,7 @@ function App() {
       <form>
         <input type="text" className="form-control mt-1" placeholder="Enter name" onChange={handleName} value={name}></input>
         <input type="email" className="form-control mt-1" placeholder="Enter email" onChange={handleEmail} value={email}></input>
-        <button type="button" className="btn btn-primary mt-2 mb-1" onClick={addContact}>Add task</button>
+        <button type="button" className="btn btn-primary mt-2 mb-1" onClick={addContact}>Add contact</button>
      </form>
      <Contact contacts={contacts} deleteContact={deleteContact} editContact={editContact}/>
       </div>
