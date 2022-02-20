@@ -6,9 +6,9 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("")
   const [contacts, setContacts] = useState([
-    {Name:"Arjun reddy",Email:"jackdaniels549@gmail.com"},
+    {Name:"Chulbul Pandey",Email:"supercop@gmail.com"},
     {Name:"Gabbar Singh",Email:"ihave2handslol@gmail.com"},
-    {Name:"Bajirao Singham",Email:"bolosubaankesari@gmail.com"},
+    {Name:"Bajirao Singham",Email:"thelionking@gmail.com"},
 
   ])
   const handleName=(event)=>{
