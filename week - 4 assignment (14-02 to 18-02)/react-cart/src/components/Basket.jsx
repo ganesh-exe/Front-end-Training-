@@ -4,9 +4,8 @@ import './Basket.css';
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
-  const taxPrice = itemsPrice * 0.25;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-  const totalPrice = itemsPrice + taxPrice + shippingPrice;
+  const totalPrice = itemsPrice + shippingPrice;
   return (
     <aside className="block col-1" id='cart'>
       <h2>Cart Items</h2>
@@ -38,11 +37,7 @@ export default function Basket(props) {
               <div className="col-1 text-right">INR {itemsPrice.toFixed(2)}</div>
             </div>
             <div className="row">
-              <div className="col-2">Tax Price</div>
-              <div className="col-1 text-right">INR {taxPrice.toFixed(2)}</div>
-            </div>
-            <div className="row">
-              <div className="col-2">Shipping Price</div>
+              <div className="col-2">Shipping Price*</div>
               <div className="col-1 text-right">
               INR {shippingPrice.toFixed(2)}
               </div>
@@ -62,6 +57,7 @@ export default function Basket(props) {
                 Checkout
               </button>
             </div>
+            <div className="end"><small>*Shipping price applicable for products under price of INR 2000 and varies for local and outstation deliveries </small></div>
           </>
         )}
       </div>

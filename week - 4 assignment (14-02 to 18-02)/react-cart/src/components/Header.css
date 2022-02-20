@@ -1,0 +1,11 @@
+#head{
+    padding: 1rem;
+    margin: 0.5rem;
+      border-radius: 0.5rem;
+      border-style: outset ;
+       background-color:#ebfa19;
+}
+small{
+    font-size:x-small;
+    margin: 0px 5px;
+}
