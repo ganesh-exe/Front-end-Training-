@@ -12,7 +12,7 @@ const data={
   },
   {   id:'3',
   name:'Book - How to build good react projects for real',
-  price:1799,
+  price:1899,
   image:'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1509748768i/36530551._UY500_SS500_.jpg'
 },
   ]

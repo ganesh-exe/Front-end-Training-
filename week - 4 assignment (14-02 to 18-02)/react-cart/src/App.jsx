@@ -2,7 +2,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Basket from './components/Basket';
 import data from './data';
-import { useState } from 'react';
+import { useState } from 'react'
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
@@ -14,7 +14,7 @@ function App() {
           x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
         )
       );
-  //console.log(cartItems);
+  //console.log(cartItems)
 } 
     else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
