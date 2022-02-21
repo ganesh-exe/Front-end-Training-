@@ -14,15 +14,21 @@ function App() {
           x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
         )
       );
-    } else {
+  //console.log(cartItems);
+} 
+    else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
+  console.log(cartItems);
+
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
-    } else {
+  //console.log(cartItems);
+    } 
+    else {
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
@@ -30,6 +36,8 @@ function App() {
       );
     }
   };
+  console.log(cartItems);
+
   return (
     <div className="App">
       <Header countCartItems={cartItems.length}></Header>
