@@ -1,4 +1,6 @@
-const Delete=()=>{
+import { useState, useEffect } from "react";
+
+export const Delete=()=>{
     const [data, setdata] = useState([])
     useEffect(() => {
       fetch("https://jsonplaceholder.typicode.com/users")
@@ -17,8 +19,10 @@ return(
         { data.map((El)=>{
             return(
                 <>
+                <div>
                 <h2>{El.name}</h2>
-                <button onClick={deleteItem}>Delete</button>
+                <button onClick={()=>deleteItem(El.id)}>Delete</button>
+                </div>
                 </>
             )
         })}

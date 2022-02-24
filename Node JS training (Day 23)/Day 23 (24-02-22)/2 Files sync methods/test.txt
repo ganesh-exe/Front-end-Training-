@@ -1,0 +1,1 @@
+First line written using node  Second line using writeFile  Third line using appendFile
