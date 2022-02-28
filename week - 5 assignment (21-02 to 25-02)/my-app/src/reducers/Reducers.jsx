@@ -12,6 +12,13 @@ export const calorieReducer=(state=initstate,action)=>{
         case("DEL_ALL"):{
             return state.filter((item)=>item.id==action.id)
         }
+    //     case "UPDATE_ENTRY":
+    //   if (window.confirm("Do you want to edit?")) {
+    //     return [...state, { ...action.entry}];
+    //   }
+    //   else {
+    //     return state;
+    //   }
         default:
             return state
     }
